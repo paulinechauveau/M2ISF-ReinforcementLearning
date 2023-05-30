@@ -142,6 +142,8 @@ plt.show()
 
 
 # UCB vs e-greedy
+
+## e-greedy
 rewards = np.zeros((T, M))
 q_star = np.zeros((k, M))
 
@@ -169,6 +171,7 @@ for m in tqdm(range(M)):
 mean_reward=np.mean(rewards,axis=1)
 plt.plot(range(T), mean_reward, label=r' $\epsilon$=' + str(epsilon))
 
+## UCB
 rewards = np.zeros((T, M))
 q_star = np.zeros((k, M))
 
